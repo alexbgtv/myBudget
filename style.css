@@ -1,0 +1,39 @@
+body {
+	background: #8dbbdd;
+}
+.title {
+	text-align: center;
+}
+.brd {
+	border: solid 1px grey;
+	border-radius: 3px;
+}
+
+.col {
+	background: blue;
+	margin: 3px;
+	color: white;
+	margin: 3px;
+}
+
+.navy {
+	background: navy;
+	border-radius: 3px;
+}
+.c-yellow {
+	color: yellow;
+	text-align: right;
+}
+.m3{
+	margin: 3px;
+}
+.p3{
+	padding: 2px;
+}
+.cntr {
+	text-align: center;
+	cursor: pointer;
+}
+h6 {
+	text-align: center;
+}
