@@ -23,7 +23,8 @@
 
     let titleDetailse = document.querySelector('#titleDetailse'),
     	block =  document.querySelector('#block'),
-    	 plus = document.querySelector('#plus')
+    	plus = ''
+    	 
 
 
     // main
@@ -35,25 +36,56 @@
     	plusArticle(budget)
     })
 
+
     let incomeShow = document.querySelector('#income')
     incomeShow.addEventListener('click', function(){
     	titleDetailse.innerHTML = 'Доход'
     	change('income')
-    	plusArticle('income')
+
+    	let id = document.querySelector('.button')
+    	id.setAttribute('id', 'plusIncome')
+
+    	//plusArticle('income')
+    	plusIncome.addEventListener('click', function(){
+	    	let a = prompt('СТАТЬЯ-income', 'золото'),
+	    		b = +prompt('СУММА', 10000)
+	   		appData.income[a] =  b
+	   		change('income')
+    	})
     })
 
     let savingShow = document.querySelector('#saving')
     savingShow.addEventListener('click', function(){
     	titleDetailse.innerHTML = 'Сбережения'
     	change('savings')
-    	plusArticle('savings')
+
+    	let id = document.querySelector('.button')
+    	id.setAttribute('id', 'plusSevings')
+
+    	//plusArticle('savings')
+    	plusSevings.addEventListener('click', function(){
+	    	let a = prompt('СТАТЬЯ-savings', 'золото'),
+	    		b = +prompt('СУММА', 10000)
+	   		appData.savings[a] =  b
+	   		change('savings')
+    	})
     })
 
     let expensiveShow = document.querySelector('#expensive')
     expensiveShow.addEventListener('click', function(){
     	titleDetailse.innerHTML = 'Расходы'
     	change('expenses')
-    	plusArticle('expenses')
+
+    	let id = document.querySelector('.button')
+    	id.setAttribute('id', 'plusExpenses')
+
+    	//plusArticle('expenses')
+    	plusExpenses.addEventListener('click', function(){
+	    	let a = prompt('СТАТЬЯ-expenses', 'золото'),
+	    		b = +prompt('СУММА', 10000)
+	   		appData.expenses[a] =  b
+	   		change('expenses')
+    	})
     })
 
 
@@ -70,14 +102,14 @@
     	}
     }
 
-    function plusArticle(category) {
-    	plus.addEventListener('click', function(){
-	    	let a = prompt(category, 'золото'),
-	    		b = +prompt(category, 10000)
-	   		appData[category][a] =  b
-	   		change(category)
-    	})
-    }
+    // function plusArticle(category) {
+    // 	plus.addEventListener('click', function(){
+	   //  	let a = prompt(category, 'золото'),
+	   //  		b = +prompt(category, 10000)
+	   // 		appData[category][a] =  b
+	   // 		change(category)
+    // 	})
+    // }
 
     // detailes
     
